@@ -1,0 +1,13 @@
+Recordatorio_exe.asp genera una ventana para imprimir un documento para el cliente y el mostrador (modelo en PDF) por eso el comprobante de deuda que firma el cliente es por 2.
+Actualmente se imprime en hoja A4 lisa, pero próximamente será una con marca de agua y troquelada a:
+ 25% para el comprobante mostrador
+ 25% para el comprobante cliente
+ 50% para el detalle de cuotas y vencimientos para el cliente
+El problema con ésto es que depende el importe, si es efectivo u orden de compra, o la cantidad de cuotas, 
+el formato tiende a desplazarse hacia arriba o hacia abajo.
+Como ahora lo cortan a mano no pasa nada, pero con el troquelado puede ser un problema.
+
+Cómo te parece solucionarlo? 
+
+
+Éxitos!!

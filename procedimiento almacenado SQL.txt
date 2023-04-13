@@ -1,0 +1,264 @@
+USE [Cordillera]
+GO
+
+/****** Object:  StoredProcedure [dbo].[spRecordatorio_TraerUno]    Script Date: 08/04/2021 16:26:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER OFF
+GO
+
+
+
+--  [spRecordatorio_TraerUno] 260041249
+ALTER procedure [dbo].[spRecordatorio_TraerUno] 
+	@Id_Contrato	int
+as
+
+select  
+	CASE 
+		WHEN Periodos >= 1 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 1) 
+		ELSE '-'
+	END as Cuota1,
+	CASE
+		WHEN Periodos >= 2 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 2) 
+		ELSE '-'
+	END as Cuota2,
+	CASE
+		WHEN Periodos >= 3 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 3) 
+		ELSE '-'
+	END as Cuota3,
+	CASE
+		WHEN Periodos >= 4 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 4) 
+		ELSE '-'
+	END as Cuota4,
+	CASE
+		WHEN Periodos >= 5 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 5) 
+		ELSE '-'
+	END as Cuota5,
+	CASE
+		WHEN Periodos >= 6 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 6) 
+		ELSE '-'
+	END as Cuota6,
+	CASE
+		WHEN Periodos >= 7 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 7) 
+		ELSE '-'
+	END as Cuota7,
+	CASE
+		WHEN Periodos >= 8 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 8) 
+		ELSE '-'
+	END as Cuota8,
+	CASE
+		WHEN Periodos >= 9 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 9) 
+		ELSE '-'
+	END as Cuota9,
+	CASE
+		WHEN Periodos >= 10 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 10) 
+		ELSE '-'
+	END as Cuota10,
+	CASE
+		WHEN Periodos >= 11 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 11) 
+		ELSE '-'
+	END as Cuota11,
+	CASE
+		WHEN Periodos >= 12 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 12) 
+		ELSE '-'
+	END as Cuota12,
+	CASE
+		WHEN Periodos >= 13 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 13) 
+		ELSE '-'
+	END as Cuota13,
+	CASE
+		WHEN Periodos >= 14 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 14) 
+		ELSE '-'
+	END as Cuota14,
+	CASE
+		WHEN Periodos >= 15 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 15) 
+		ELSE '-'
+	END as Cuota15,
+	CASE
+		WHEN Periodos >= 16 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 16) 
+		ELSE '-'
+	END as Cuota16,
+	CASE
+		WHEN Periodos >= 17 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 17) 
+		ELSE '-'
+	END as Cuota17,
+	CASE
+		WHEN Periodos >= 18 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 18) 
+		ELSE '-'
+	END as Cuota18,
+	CASE
+		WHEN Periodos >= 19 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 19) 
+		ELSE '-'
+	END as Cuota19,
+	CASE
+		WHEN Periodos >= 20 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 20) 
+		ELSE '-'
+	END as Cuota20,
+	CASE
+		WHEN Periodos >= 21 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 21) 
+		ELSE '-'
+	END as Cuota21,
+	CASE
+		WHEN Periodos >= 22 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 22) 
+		ELSE '-'
+	END as Cuota22,
+	CASE
+		WHEN Periodos >= 23 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 23) 
+		ELSE '-'
+	END as Cuota23,
+	CASE
+		WHEN Periodos >= 24 THEN (SELECT convert(char(10),MAX(vencimiento),103) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 24) 
+		ELSE '-'
+	END as Cuota24,
+	
+	
+	CASE 
+		WHEN Periodos >= 1 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)  from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 1) 
+		ELSE 0.00
+	END as ImpCuota1,
+	CASE
+		WHEN Periodos >= 2 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 2) 
+		ELSE 0.00
+	END as ImpCuota2,
+	CASE
+		WHEN Periodos >= 3 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 3) 
+		ELSE 0.00
+	END as ImpCuota3,
+	CASE
+		WHEN Periodos >= 4 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 4) 
+		ELSE 0.00
+	END as ImpCuota4,
+	CASE
+		WHEN Periodos >= 5 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 5) 
+		ELSE 0.00
+	END as ImpCuota5,
+	CASE
+		WHEN Periodos >= 6 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 6) 
+		ELSE 0.00
+	END as ImpCuota6,
+	CASE
+		WHEN Periodos >= 7 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 7) 
+		ELSE 0.00
+	END as ImpCuota7,
+	CASE
+		WHEN Periodos >= 8 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 8) 
+		ELSE 0.00
+	END as ImpCuota8,
+	CASE
+		WHEN Periodos >= 9 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 9) 
+		ELSE 0.00
+	END as ImpCuota9,
+	CASE
+		WHEN Periodos >= 10 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 10) 
+		ELSE 0.00
+	END as ImpCuota10,
+	CASE
+		WHEN Periodos >= 11 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 11) 
+		ELSE 0.00
+	END as ImpCuota11,
+	CASE
+		WHEN Periodos >= 12 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 12) 
+		ELSE 0.00
+	END as ImpCuota12,
+	CASE
+		WHEN Periodos >= 13 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 13) 
+		ELSE 0.00
+	END as ImpCuota13,
+	CASE
+		WHEN Periodos >= 14 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 14) 
+		ELSE 0.00
+	END as ImpCuota14,
+	CASE
+		WHEN Periodos >= 15 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 15) 
+		ELSE 0.00
+	END as ImpCuota15,
+	CASE
+		WHEN Periodos >= 16 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 16) 
+		ELSE 0.00
+	END as ImpCuota16,
+	CASE
+		WHEN Periodos >= 17 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 17) 
+		ELSE 0.00
+	END as ImpCuota17,
+	CASE
+		WHEN Periodos >= 18 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 18) 
+		ELSE 0.00
+	END as ImpCuota18,
+	CASE
+		WHEN Periodos >= 19 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 19) 
+		ELSE 0.00
+	END as ImpCuota19,
+	CASE
+		WHEN Periodos >= 20 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 20) 
+		ELSE 0.00
+	END as ImpCuota20,
+	CASE
+		WHEN Periodos >= 21 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 21) 
+		ELSE 0.00
+	END as ImpCuota21,
+	CASE
+		WHEN Periodos >= 22 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 22) 
+		ELSE 0.00
+	END as ImpCuota22,
+	CASE
+		WHEN Periodos >= 23 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 23) 
+		ELSE 0.00
+	END as ImpCuota23,
+	CASE
+		WHEN Periodos >= 24 THEN (SELECT sum(Cuota_Capital + Cuota_Int + IVA_Dev + Gastos)   from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 24) 
+		ELSE 0.00
+	END as ImpCuota24,
+
+	cpt.Codigo		Contrato,
+	convert(datetime,cpt.fecha_Confirmacion,112) as Fecha,
+	dbo.fechatxt10(dbo.fechatxt(cpt.fecha_Confirmacion)) as Fecha10,
+	isnull(cpt.id_contrato , 0) 		as id_contrato,
+
+	cpt.Periodos			AS Cuotas,
+	un.Descripcion			as Sucursal,
+	em.Descripcion			as Sociedad,
+	rtrim(cl.Apellido) + ', ' + rtrim(cl.Nombre) as Cliente,
+	cl.Nro_Documento		AS Documento,
+	cl.Id_cliente			AS Legajo,
+	rtrim(ca.Nombre) + ' ' + cast(cl.Numero  as varchar(7)) as Calle,
+	co.Denominacion			as Comercio,
+	co.Codigo as NroCom,
+	CASE 
+		WHEN co.Comercio_Efectivo = 'S' then 'Efectivo'
+		WHEN co.Comercio_Efectivo = 'N' then 'Orden de Compra*(para ser aplicada a la compra de mercadería)'
+		ELSE 'Error'
+	END as Equis,
+	co.Comercio_Efectivo as TipoCred, 
+	lo.Descripcion			as localidad,
+	cl.CP					as CP,
+	pr.Id_Provincia,
+	pr.Descripcion			AS Provincia,
+	pro.Codigo				as CodPlan
+	,(SELECT RIGHT(convert(char(10),min(vencimiento),103),7) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato) as Desde
+	,(SELECT RIGHT(convert(char(10),MAX(Vencimiento),103),7) from GisCliente_Doc c1 where c1.id_contrato = cpt.id_contrato) as Hasta
+	,(SELECT Valor from GisMi_Unidad WHERE id_Config =2) AS Direccion_Unidad 
+	,(SELECT Valor from GisMi_Unidad WHERE id_Config =4) AS CodPost_Unidad
+	,(SELECT Valor from GisMi_Unidad WHERE id_Config =3) AS Localidad_Unidad
+	,(SELECT Valor from GisMi_Unidad WHERE id_Config =7) AS Provincia_Unidad
+	,(SELECT day(MAX(vencimiento)) from GisCliente_Doc c where c.id_contrato = cpt.id_contrato AND cuota = 1) Dia_Vto
+	,cpt.Monto	Capital
+	,dbo.CantidadConLetra(cpt.Monto) as MontoLTS
+
+FROM giscliente_prod_tran cpt  
+	left join gisCliente_Cta_Cte cc		on cc.Id_Cliente_CtaCte = cpt.Id_Cliente_CtaCte
+	left join gisCliente cl				on cl.Id_Cliente = cc.Id_Cliente
+	left join dbo.GISProd_Estandar pro	on pro.Id_Producto = cpt.Id_Producto
+	left join GisCalles ca				on ca.Id_Calle = cl.Id_Calle				
+	left join GisLocalidad lo			on lo.Id_localidad = ca.Id_localidad 
+	left join Giscomercios co			on co.Id_Comercio =  cpt.Id_Comercio
+	left join gisUnidad_operativa un	on un.Id_unidad = co.Id_unidad
+	left join gisUnidad_operativa em	on em.Id_unidad = un.Id_Dependencia
+	left join dbo.GISPartido pa			on pa.Id_Partido = lo.Id_Partido
+	left join dbo.GISProvincia pr		on pr.Id_Provincia = pa.Id_Provincia
+	
+where cpt.Id_Contrato = @Id_contrato
+
+GO
+

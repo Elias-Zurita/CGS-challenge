@@ -1,0 +1,23 @@
+
+.cajaPadre{
+    width: 800px;
+    height: 1150px;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+.mostrador{
+    border: black solid;
+    height: 25%;
+}
+
+.cliente{
+    border: black solid;
+    height: 25%;
+
+}
+.cuotas{
+    border: black solid;
+    height: 50%;
+}
