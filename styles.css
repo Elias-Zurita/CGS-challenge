@@ -1,4 +1,3 @@
-
 .cajaPadre{
     width: 800px;
     height: 1150px;
@@ -8,16 +7,28 @@
  
 }
 .mostrador{
-    border: black solid;
+    border-top: white solid;
+    border-left: white solid;
+    border-right: white solid;
+    border-bottom: grey solid;
+    border-style:dotted;
     height: 25%;
 }
 
 .cliente{
-    border: black solid;
+    border-top: grey solid;
+    border-left: white solid;
+    border-right: white solid;
+    border-bottom: gray solid;
+    border-style:dotted;
     height: 25%;
 
 }
 .cuotas{
-    border: black solid;
+    border-top: grey solid;
+    border-left: white solid;
+    border-right: white solid;
+    border-bottom: white solid;
+    border-style: dotted;
     height: 50%;
 }
